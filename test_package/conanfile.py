@@ -4,7 +4,7 @@ import os
 
 class ProtobufTestConan(ConanFile):
     settings = "os", "compiler", "build_type", "arch"
-    requires = "Protobuf/2.6.1@memsharded/testing"
+    requires = "Protobuf/2.6.1@gasuketsu/testing"
     generators = "cmake"
 
     def build(self):
