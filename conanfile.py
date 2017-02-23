@@ -103,3 +103,6 @@ class ProtobufConan(ConanFile):
             self.cpp_info.libs = ["libprotobuf.a"] if not self.options.shared else ["libprotobuf.9.dylib"]
         else:
             self.cpp_info.libs = ["protobuf"]
+        if self.settings.os == "Linux":
+            self.env_info.path.append(os.path.join(self.package_folder, "bin"))
+            self.env_info.LD_LIBRARY_PATH.append(os.path.join(self.package_folder, "lib"))
