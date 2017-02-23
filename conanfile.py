@@ -106,3 +106,4 @@ class ProtobufConan(ConanFile):
         if self.settings.os == "Linux":
             self.env_info.path.append(os.path.join(self.package_folder, "bin"))
             self.env_info.LD_LIBRARY_PATH.append(os.path.join(self.package_folder, "lib"))
+            self.env_info.PROTOBUF_HOME = self.package_folder
